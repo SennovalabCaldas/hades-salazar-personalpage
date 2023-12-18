@@ -1,0 +1,37 @@
+.academic-experience {
+  padding-left: 10px;
+  padding-right: 10px;
+  .ant-table-content {
+    font-size: 12px;
+  }
+}
+
+.new-academic-experience-container {
+  padding: 20px;
+
+  .ant-form {
+    max-width: 400px;
+    margin: 0 auto;
+
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+
+    .ant-upload {
+      width: 100%;
+    }
+
+    .ant-btn {
+      margin-right: 8px;
+    }
+
+    .ant-select {
+      width: 100%;
+    }
+
+    .ant-switch {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

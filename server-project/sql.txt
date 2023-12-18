@@ -1,0 +1,7 @@
+Instalación
+npm i mysql2
+
+Conexión:
+mysql -u root -p
+> root
+> show databases

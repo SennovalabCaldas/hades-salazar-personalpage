@@ -1,0 +1,44 @@
+.demo-sider {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(61, 56, 56, 0.15);
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: all 0.2s;
+  width: 300px !important;
+
+}
+
+.ant-layout-sider {
+  position: relative;
+  min-width: 0;
+  background: #2a2e31 !important;
+  transition: all 0.2s, background 0s;
+  width: 300px !important;
+}
+
+.ant-menu {
+  color: rgba(255, 255, 255, 0.65);
+  background: #2a2e31 !important;
+}
+.ant-menu-item-selected {
+  background: #d1711134 !important;
+}
+
+.ant-menu-item:hover {
+  background: #b1800545 !important;
+}
+.demo-logo-horizontal {
+  height: 70px;
+  margin: 16px;
+  padding: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}

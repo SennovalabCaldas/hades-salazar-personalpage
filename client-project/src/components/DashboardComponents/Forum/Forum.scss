@@ -1,0 +1,34 @@
+/* styles.css (o cualquier nombre que prefieras) */
+
+/* Estilos para el contenedor principal del foro */
+#forum-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para cada publicación */
+  .post {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los comentarios */
+  .comments {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .comment {
+    margin-bottom: 8px;
+  }
+  
+  /* Estilos para el campo de entrada de comentarios */
+  .comment-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    box-sizing: border-box;
+  }
+  

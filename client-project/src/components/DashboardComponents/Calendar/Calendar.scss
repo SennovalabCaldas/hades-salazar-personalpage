@@ -1,0 +1,12 @@
+.rbc-event {
+  background-color: #749da4;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 5px;
+
+  &:hover {
+    background-color: #668ac9;
+    border: 1px solid #e6e6e6;
+    color: black;
+  }
+}
