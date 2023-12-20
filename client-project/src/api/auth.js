@@ -32,10 +32,10 @@ export class Auth {
 
     const json = await response.json();
 
-    console.log("json=>", json);
-    // if (json.access) {
-    //   this.setAccessToken(json.access);
-    // }
+    // console.log("json=>", json);
+    if (json.access) {
+      this.setAccessToken(json.access);
+    }
     return json;
   };
 
@@ -48,7 +48,7 @@ export class Auth {
     });
 
     const json = await response.json();
-    console.log("json=>", json);
+    // console.log("json=>", json);
 
     return json;
   };
@@ -60,4 +60,8 @@ export class Auth {
   getAccessToken = () => {
     return localStorage.getItem("access");
   };
+
+  logout = () => {  
+    localStorage.removeItem("access");
+  }
 }

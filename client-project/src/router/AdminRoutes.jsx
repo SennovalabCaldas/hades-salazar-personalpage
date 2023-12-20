@@ -87,7 +87,7 @@ const AdminRoutes = () => {
           </LayoutTemplate>
         }
       />
-      <Route path="/*" element={<Dashboard />} />
+      <Route path="/*" element={<LayoutTemplate><Dashboard /></LayoutTemplate>} />
     </Routes>
   );
 };

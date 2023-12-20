@@ -17,12 +17,18 @@ import {
 import "./LayoutTemplate.scss";
 import { Link } from "react-router-dom";
 import SubMenu from "antd/es/menu/SubMenu";
+import ProtectedRoute from "../router/ProtectedRoute";
+import { Auth } from "../api";
+const auth = new Auth();
 
 export const LayoutTemplate = ({ children }) => {
+  const token = auth.getAccessToken();
+
   const [collapsed, setCollapsed] = useState(false);
   const colorBgContainer = "#fff";
 
   return (
+    <ProtectedRoute token={token}>
     <Layout>
       <Sider
         className="demo-sider"
@@ -95,8 +101,13 @@ export const LayoutTemplate = ({ children }) => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              cursor: "pointer",
             }}
-            onClick={() => console.log("click")}
+            onClick={() =>{
+              auth.logout();
+              window.location.href = "/login";
+
+            } }
           >
             <LoginOutlined />
           </div>
@@ -113,5 +124,6 @@ export const LayoutTemplate = ({ children }) => {
         </Content>
       </Layout>
     </Layout>
+    </ProtectedRoute>
   );
 };

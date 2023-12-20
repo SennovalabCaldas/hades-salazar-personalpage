@@ -15,10 +15,9 @@ import { Register } from "./components/Register/Register";
 import { Home } from "./components/WebComponents/Home";
 import "./App.scss";
 import { AcademicExperience } from "./components/WebComponents/AcademicExperience/AcademicExperience";
-
 const auth = new Auth();
 
-function App() {
+function App () {
   const dispatch = useDispatch();
   const token = auth.getAccessToken();
   console.log(token);
@@ -43,17 +42,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {token ? (
-          <Route path="/*" element={<AdminRoutes />} />
-        ) : (
-          <>
-            <Route path="/" element={<Home />} />
-            <Route path="/gallery" element={<AcademicExperience />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            {/* <Route path="/*" element={<Navigate to="/" replace />} /> */}
-          </>
-        )}
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<AcademicExperience />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/*" element={ <AdminRoutes token={token} />} />
       </Routes>
     </BrowserRouter>
   );
